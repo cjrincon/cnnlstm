@@ -4,6 +4,8 @@
 # cnnlstm
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/cjrincon/cnnlstm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/cjrincon/cnnlstm/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of cnnlstm is to …
