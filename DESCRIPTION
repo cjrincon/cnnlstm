@@ -4,6 +4,7 @@ Version: 1.0.0
 Authors@R: 
     person("Catherine", "Rincon", , "catherine.rincon@udea.edu.co", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
+Maintainer: Catherine Rincón <catherine.rincon@udea.edu.co>
 Description: This package provides the functions to carry out the methodology to perform a smoothing of data obtained from sensors with a CNN network and a many-to-one prediction with an LSTM network.
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -11,3 +12,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 URL: https://github.com/cjrincon/cnnlstm
 BugReports: https://github.com/cjrincon/cnnlstm/issues
+Imports:
+    keras,
+    tibble,
+    stats
