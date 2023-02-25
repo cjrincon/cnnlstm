@@ -23,10 +23,8 @@ CNN-LSTM:
 ## Installation
 
 You can install the development version of cnnlstm from
-[GitHub](https://github.com/) with:
-
-It is recommended to follow these steps to avoid problems when using the
-package:
+[GitHub](https://github.com/). It is recommended to follow these steps
+to avoid problems when using the package:
 
 ``` r
 # Step 1: Install the reticulate package
@@ -39,9 +37,19 @@ library(tensorflow)
 
 # Step 3: Use the install_tensorflow() funcion to install the TensorFlow module
 install_tensorflow()
-```
 
-``` r
-# install.packages("devtools")
+# Step 4: Install the keras package
+install.packages("keras")
+library(keras)
+
+# Step 5: Confirm that Tensorflow installation succeeded
+library(tensorflow)
+tf$constant("Hello Tensorflow!")
+
+# Step 6: Install the devtools package
+install.packages("devtools")
+
+# Step 7:  Install and load the cnnlstm package
+install.packages("devtools")
 devtools::install_github("cjrincon/cnnlstm")
 ```
