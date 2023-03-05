@@ -39,27 +39,20 @@ You can install the development version of cnnlstm from [GitHub](https://github.
 # Step 1: Install the reticulate package
 install.packages("reticulate")
 library(reticulate)
-
 # Step 2: Install the tensorflow package
 install.packages("tensorflow")
 library(tensorflow)
-
 # Step 3: Use the install_tensorflow() funcion to install the TensorFlow module
 install_tensorflow()
-
 # Step 4: Confirm that Tensorflow installation succeeded
 library(tensorflow)
 tf$constant("Hello Tensorflow!")
-
 # Step 5: Install the keras package
 install.packages("keras")
 library(keras)
-
 # Step 6: Install the devtools package
 install.packages("devtools")
-
 # Step 7:  Install and load the cnnlstm package
 devtools::install_github("cjrincon/cnnlstm")
 library(cnnlstm)
 ```
-
