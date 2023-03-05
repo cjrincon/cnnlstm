@@ -24,7 +24,7 @@ split_seq <- function(dataset, n_steps){
       x <- c(x, seq_x)
       y <- c(y, seq_y)}}
 
-  x <- array(x, dim = c(nrow(dataset)-(n_steps)+1, n_steps, ncol(dataset)-1))
+  x <- array(x, dim = c(n_steps, ncol(dataset)-1, nrow(dataset)-(n_steps)+1))
   y <- array(y)
 
   list('x'= x, 'y' = y)
