@@ -10,6 +10,7 @@
 #'
 #' @return Return model architecture and model summary
 #'
+#' @example examples/example_param_CNN.R
 #'
 #' @importFrom keras keras_model_sequential layer_conv_1d layer_max_pooling_1d layer_flatten layer_dense
 #'
