@@ -18,7 +18,7 @@ param_CNN(n_steps, n_filter, size_filter, pool_size, n_neuron)
 \item{n_neuron}{Number of neurons in dense layer}
 }
 \value{
-Return model architecture and model summary
+Return CNN model architecture and model summary
 }
 \description{
 Define the hyperparameters of the convolutional neural network CNN

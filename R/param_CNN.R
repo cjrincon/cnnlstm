@@ -8,7 +8,7 @@
 #' @param pool_size Size of pool in max_pooling layer
 #' @param n_neuron Number of neurons in dense layer
 #'
-#' @return Return model architecture and model summary
+#' @return Return CNN model architecture and model summary
 #'
 #' @example examples/example_param_CNN.R
 #'
