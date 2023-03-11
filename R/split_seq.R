@@ -2,7 +2,8 @@
 #'
 #' @author Catherine Rincon, \email{catherine.rincon@udea.edu.co}
 #'
-#' @param dataset Dataset to split into samples as multivariate sequences dataset
+#' @param x features dataset to split into samples as multivariate sequences
+#' @param y target dataset with numeric values
 #' @param n_steps Number of steps to split into samples
 #'
 #' @return Returns two data sets: one with the information of the x
@@ -11,21 +12,20 @@
 #'
 #'
 #' @export
-split_seq <- function(dataset, n_steps){
-  for (i in 1:nrow(dataset)){
-    end_ix <- i + n_steps - 1
-    if (end_ix > nrow(dataset)){break}
-    seq_x <- dataset[i:end_ix, -ncol(dataset)]
-    seq_y <- dataset[end_ix, ncol(dataset)]
-    if (i==1){
-      x <- seq_x
-      y <- seq_y}
-    else {
-      x <- c(x, seq_x)
-      y <- c(y, seq_y)}}
+split_seq <- function(x, y, n_steps){
+  y <- matrix(y, ncol=1)
+  if (nrow(x) != nrow(y))
+    stop(paste(x, 'must be the same rows as', y))
 
-  x <- array(x, dim = c(n_steps, ncol(dataset)-1, nrow(dataset)-(n_steps)+1))
-  y <- array(y)
+  n <- nrow(x)
+  ini <- 1:(n-(n_steps-1))
+  fin <- n_steps:n
+  X <- NULL
+  Y <- NULL
+  for (i in ini) {
+    X[[i]] <- x[ini[i]:fin[i], ]
+    Y[[i]] <- y[fin[i], 1]
+  }
 
-  list('x'= x, 'y' = y)
+  list('x'= X, 'y' = Y)
 }

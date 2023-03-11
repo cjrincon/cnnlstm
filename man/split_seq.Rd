@@ -4,10 +4,12 @@
 \alias{split_seq}
 \title{Split a multivariate dataset sequence into samples}
 \usage{
-split_seq(dataset, n_steps)
+split_seq(x, y, n_steps)
 }
 \arguments{
-\item{dataset}{Dataset to split into samples as multivariate sequences dataset}
+\item{x}{features dataset to split into samples as multivariate sequences}
+
+\item{y}{target dataset with numeric values}
 
 \item{n_steps}{Number of steps to split into samples}
 }
