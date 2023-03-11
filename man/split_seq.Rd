@@ -20,6 +20,14 @@ and another with the information of the y
 \description{
 Split a multivariate dataset sequence into samples
 }
+\examples{
+# Example 1
+# Generating dataset to split into samples as multivariate dataset
+
+x <- matrix(1:30, nrow=10, ncol=3, byrow=TRUE)
+y <- matrix(rpois(n=10, lambda=5), nrow=1)
+a <- split_seq(x, y, 3)
+}
 \author{
 Catherine Rincon, \email{catherine.rincon@udea.edu.co}
 }

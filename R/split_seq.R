@@ -9,7 +9,7 @@
 #' @return Returns two data sets: one with the information of the x
 #' and another with the information of the y
 #'
-#'
+#' @example examples/example_split_seq.R
 #'
 #' @export
 split_seq <- function(x, y, n_steps){
