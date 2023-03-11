@@ -24,5 +24,5 @@ param_CNN <- function(n_steps, n_filter, size_filter, pool_size, n_neuron){
     layer_dense(n_neuron, activation = 'relu') |>
     layer_dense(1)
 
-  return(summary(model))
+  return(model)
 }

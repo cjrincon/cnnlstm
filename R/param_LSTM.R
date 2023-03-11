@@ -27,5 +27,5 @@ param_LSTM <- function(n_steps_LSTM, n_features, f_n_neuron,f_drop,s_n_neuron, s
     layer_dropout(rate = s_drop) |>
     layer_dense(1)
 
-  return(summary(model_LSTM))
+  return(model_LSTM)
 }
