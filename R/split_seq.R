@@ -22,9 +22,9 @@ split_seq <- function(x, y, n_steps) {
   for (i in ini) {
     d_x <- x[ini[i]:fin[i], ]
     d_y <- y[fin[i], 1]
-    X <- array(append(X, d_x), dim=c(3,3, i))
+    X <- array(append(X, d_x), dim=c(n_steps,ncol(x), i))
     Y <- append(Y, d_y)
   }
 
-  list(X=X, Y=array(Y))
+  list(x=X, y=array(Y))
 }
