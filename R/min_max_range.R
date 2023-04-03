@@ -13,5 +13,6 @@
 min_max_range <- function(x){
   if (sum(dim(x)) == 0)
     stop(paste('data must be minimum 1 column', '\n', ''))
+
   apply(x, MARGIN = 2, FUN = range)
 }

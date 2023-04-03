@@ -26,6 +26,9 @@ norm_min_max <- function(x, inf, scaler= 'transform'){
   if (nrow(inf) != 2)
     stop(paste('The number of rows in', inf, 'must be 2'))
 
+  if (sum(inf[1, ]) >= sum(inf[2, ]))
+    stop(paste('Minimum must be smaller than maximum'))
+
   m_min <- matrix(inf[1, ], byrow = TRUE, nrow=nrow(x), ncol=ncol(x))
   m_max <- matrix(inf[2, ], byrow = TRUE, nrow=nrow(x), ncol=ncol(x))
 
