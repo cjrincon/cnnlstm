@@ -40,7 +40,3 @@ norm_min_max <- function(x, inf, scaler= 'transform'){
   }
   res
 }
-
-
-
-
