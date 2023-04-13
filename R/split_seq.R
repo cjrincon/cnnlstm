@@ -25,6 +25,7 @@ split_seq <- function(x, y, n_steps) {
     X <- array(c(X, d_x), dim=c(n_steps,ncol(x), i))
     Y <- c(Y, d_y)
   }
+  X <- aperm(X, perm=c(3,1,2))
 
   list(x=X, y=array(Y))
 }
