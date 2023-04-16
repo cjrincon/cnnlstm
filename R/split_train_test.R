@@ -17,8 +17,8 @@ split_train_test <- function(dataset, train_size, random_seed){
   if (length(dataset) == 0)
     stop(paste(dataset, 'must have some value as input'))
 
-  if (!is.integer(random_seed))
-    stop(paste(random_seed, 'must be a integer'))
+  #if (!is.integer(random_seed))
+  #  stop(paste(random_seed, 'must be a integer'))
 
   if (!is.null(random_seed))
     set.seed(random_seed)
