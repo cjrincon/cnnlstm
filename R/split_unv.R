@@ -21,10 +21,11 @@ split_unv <- function(dataset, n_steps){
       x <- seq_x
       y <- seq_y}
     else {
-      x <- c(x, seq_x)
+      x <- array(c(x, seq_x), dim=c(n_steps,ncol(x), i))
       y <- c(y, seq_y)}}
 
-  x <- matrix(x, nrow = length(dataset)-(n_steps)+1, ncol =n_steps, byrow = TRUE)
+  x <- aperm(x, perm=c(3,1,2))
+    #matrix(x, nrow = length(dataset)-(n_steps)+1, ncol =n_steps, byrow = TRUE)
   y <- array(y)
 
   list('x'= x, 'y' = y)
