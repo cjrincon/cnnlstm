@@ -24,6 +24,7 @@ split_unv <- function(dataset, n_steps){
         x <- array(c(x, seq_x), dim=c(1, n_steps, i))
         y <- c(y, seq_y)}}
 
-  list('x'= x, 'y' = array(y))
+
+  list('x'= aperm(x, perm=c(3,2,1)), 'y' = array(y))
 }
 
