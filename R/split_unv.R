@@ -13,21 +13,17 @@
 #' @export
 split_unv <- function(dataset, n_steps){
     for (i in 1:length(dataset)){
-    end_ix <- i + n_steps - 1
-    if (end_ix > length(dataset)){break}
-    seq_x <- dataset[i:end_ix]
-    seq_y <- dataset[end_ix]
-    if (i==1){
-      x <- seq_x
-      y <- seq_y}
-    else {
-      x <- array(c(x, seq_x), dim=c(n_steps,ncol(x), i))
-      y <- c(y, seq_y)}}
+      end_ix <- i + n_steps - 1
+      if (end_ix > length(dataset)){break}
+      seq_x <- dataset[i:end_ix]
+      seq_y <- dataset[end_ix]
+      if (i==1){
+        x <- array(seq_x, dim=c(1, n_steps, i))
+        y <- seq_y}
+      else {
+        x <- array(c(x, seq_x), dim=c(1, n_steps, i))
+        y <- c(y, seq_y)}}
 
-  x <- aperm(x, perm=c(3,1,2))
-    #matrix(x, nrow = length(dataset)-(n_steps)+1, ncol =n_steps, byrow = TRUE)
-  y <- array(y)
-
-  list('x'= x, 'y' = y)
+  list('x'= x, 'y' = array(y))
 }
 
