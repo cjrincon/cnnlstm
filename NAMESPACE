@@ -3,6 +3,7 @@
 export(conv_array)
 export(error_metrics)
 export(hp_tuning_CNN)
+export(hp_tuning_LSTM)
 export(min_max_range)
 export(norm_min_max)
 export(param_CNN)
