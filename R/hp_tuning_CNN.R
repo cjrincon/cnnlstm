@@ -34,6 +34,8 @@ hp_tuning_CNN <- function(data, n_steps, n_filter,neuron, learn_rate, epoc){
                          neuron = numeric(),
                          learn_rate = numeric(),
                          epoc = numeric(),
+                         error_train = numeric(),
+                         error_test = numeric(),
                          sum_error = numeric())
 
 
@@ -90,9 +92,9 @@ hp_tuning_CNN <- function(data, n_steps, n_filter,neuron, learn_rate, epoc){
                           verbose=0)
             pred_train[[i]] <- model |> predict(X_train_CNN[[i]])
             pred_test[[i]] <- model |> predict(X_test_CNN[[i]])
-            cal_error <- cal_error +
-              sum(error_metrics(model, X_train_CNN[[i]], y_train_CNN[[i]])[2]) +
-              sum(error_metrics(model, X_test_CNN[[i]], y_test_CNN[[i]])[2])
+            error_train <- sum(error_metrics(model, X_train_CNN[[i]], y_train_CNN[[i]])[2])
+            error_test <- sum(error_metrics(model, X_test_CNN[[i]], y_test_CNN[[i]])[2])
+            cal_error <- cal_error + error_train + error_test
           }
 
           # Save error matrix
@@ -100,7 +102,9 @@ hp_tuning_CNN <- function(data, n_steps, n_filter,neuron, learn_rate, epoc){
           df_error[error, 2] <- neuron[n]
           df_error[error, 3] <- learn_rate[a]
           df_error[error, 4] <- epoc[ep]
-          df_error[error, 5] <- cal_error
+          df_error[error, 5] <- error_train
+          df_error[error, 6] <- error_test
+          df_error[error, 7] <- cal_error
 
           error <- error + 1
           cal_error <- 0
