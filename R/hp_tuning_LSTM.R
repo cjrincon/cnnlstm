@@ -83,15 +83,15 @@ hp_tuning_LSTM <- function(data, n_steps_LSTM, f_neuron,f_drop,s_neuron, s_drop,
               calc_error <- error_train + error_test
 
               # Save error matrix
-              df_error[f, 1] <- f_neuron[f]
-              df_error[f, 2] <- f_drop[d]
-              df_error[f, 3] <- s_neuron[n]
-              df_error[f, 4] <- s_drop[s]
-              df_error[f, 5] <- learn_rate[a]
-              df_error[f, 6] <- epoc[ep]
-              df_error[f, 7] <- error_train
-              df_error[f, 8] <- error_test
-              df_error[f, 9] <- calc_error
+              df_error[error, 1] <- f_neuron[f]
+              df_error[error, 2] <- f_drop[d]
+              df_error[error, 3] <- s_neuron[n]
+              df_error[error, 4] <- s_drop[s]
+              df_error[error, 5] <- learn_rate[a]
+              df_error[error, 6] <- epoc[ep]
+              df_error[error, 7] <- error_train
+              df_error[error, 8] <- error_test
+              df_error[error, 9] <- calc_error
 
               error <- error + 1
 
