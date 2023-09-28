@@ -3,14 +3,14 @@
 #' @author Catherine Rincon, \email{catherine.rincon@udea.edu.co}
 #'
 #' @param dataset Array, matrix with information to split
-#' @param train_size Proportion of the x to split as train subset
-#' @param random_seed An integer to control the random number generator used
+#' @param train_size Proportion of the x to split as train subset. By default the value is 0.8
+#' @param random_seed An integer to control the random number generator used. By default the value is 1234
 #'
 #' @return A list with train and test subsets
 #'
 #'
 #' @export
-split_train_test <- function(dataset, train_size, random_seed){
+split_train_test <- function(dataset, train_size = 0.8, random_seed = 1234){
   if (train_size > 1 || !is.numeric(train_size))
     stop(paste(train_size, 'parameter must be numeric and less than 1'))
 
