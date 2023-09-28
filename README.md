@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# cnnlstm
+# cnnlstm <img src="man/figures/logo_cnnlstm.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 

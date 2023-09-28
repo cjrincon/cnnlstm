@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# cnnlstm
+# cnnlstm <img src="man/figures/logo_cnnlstm.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/cjrincon/cnnlstm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/cjrincon/cnnlstm/actions/workflows/R-CMD-check.yaml)
