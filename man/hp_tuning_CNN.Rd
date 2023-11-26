@@ -4,10 +4,23 @@
 \alias{hp_tuning_CNN}
 \title{Hyperparameter tuning CNN}
 \usage{
-hp_tuning_CNN(data, n_steps, n_filter, neuron, learn_rate, epoc)
+hp_tuning_CNN(
+  data,
+  train_size = 0.8,
+  random_seed = 1234,
+  n_steps,
+  n_filter,
+  neuron,
+  learn_rate,
+  epoc
+)
 }
 \arguments{
 \item{data}{Dataset to split and tuning}
+
+\item{train_size}{Proportion of the x to split as train subset. By default the value is 0.8}
+
+\item{random_seed}{An integer to control the random number generator used. By default the value is 1234}
 
 \item{n_steps}{Number of steps to split into samples}
 

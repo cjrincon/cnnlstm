@@ -3,6 +3,8 @@
 #' @author Catherine Rincon, \email{catherine.rincon@udea.edu.co}
 #'
 #' @param data Dataset to split and tuning
+#' @param train_size Proportion of the x to split as train subset. By default the value is 0.8
+#' @param random_seed An integer to control the random number generator used. By default the value is 1234
 #' @param n_steps Number of steps to split into samples
 #' @param n_filter Number of filters in the convolutional layer
 #' @param neuron Number of neuron in the dense layer
@@ -16,7 +18,7 @@
 #' @importFrom keras keras_model_sequential layer_conv_1d layer_max_pooling_1d layer_flatten layer_dense compile fit optimizer_adam
 #'
 #' @export
-hp_tuning_CNN <- function(data, n_steps, n_filter,neuron, learn_rate, epoc){
+hp_tuning_CNN <- function(data, train_size = 0.8, random_seed = 1234, n_steps, n_filter,neuron, learn_rate, epoc){
 
   # Initialize variables
   n_var <- length(data)
@@ -45,7 +47,7 @@ hp_tuning_CNN <- function(data, n_steps, n_filter,neuron, learn_rate, epoc){
 
     inf <- min_max_range(bateria)
     data_CNN_norm <- norm_min_max(bateria, inf, scaler= 'transform')
-    train_test_CNN <- split_train_test(data_CNN_norm, train_size=0.7, random_seed=123)
+    train_test_CNN <- split_train_test(data_CNN_norm, train_size=train_size, random_seed=random_seed)
     train_n <- train_test_CNN$train
     test_n <- train_test_CNN$test
 

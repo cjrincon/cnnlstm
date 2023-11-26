@@ -4,14 +4,14 @@
 \alias{split_train_test}
 \title{Split arrays or matrices in train and test subsets}
 \usage{
-split_train_test(dataset, train_size, random_seed)
+split_train_test(dataset, train_size = 0.8, random_seed = 1234)
 }
 \arguments{
 \item{dataset}{Array, matrix with information to split}
 
-\item{train_size}{Proportion of the x to split as train subset}
+\item{train_size}{Proportion of the x to split as train subset. By default the value is 0.8}
 
-\item{random_seed}{An integer to control the random number generator used}
+\item{random_seed}{An integer to control the random number generator used. By default the value is 1234}
 }
 \value{
 A list with train and test subsets

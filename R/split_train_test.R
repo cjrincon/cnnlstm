@@ -22,7 +22,7 @@ split_train_test <- function(dataset, train_size = 0.8, random_seed = 1234){
 
   if (!is.null(random_seed))
     set.seed(random_seed)
-  else set.seed(42)
+  else set.seed(1234)
 
   subsample <- sample(1:nrow(dataset), round(nrow(dataset) * train_size))
   nosub <- setdiff(1:nrow(dataset), subsample)
