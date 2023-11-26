@@ -6,6 +6,8 @@
 \usage{
 hp_tuning_LSTM(
   data,
+  train_size = 0.8,
+  random_seed = 1234,
   n_steps_LSTM,
   f_neuron,
   f_drop,
@@ -17,6 +19,10 @@ hp_tuning_LSTM(
 }
 \arguments{
 \item{data}{Dataset to split and tuning}
+
+\item{train_size}{Proportion of the x to split as train subset. By default the value is 0.8}
+
+\item{random_seed}{An integer to control the random number generator used. By default the value is 1234}
 
 \item{n_steps_LSTM}{Number of steps to split into samples}
 

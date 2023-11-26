@@ -3,6 +3,8 @@
 #' @author Catherine Rincon, \email{catherine.rincon@udea.edu.co}
 #'
 #' @param data Dataset to split and tuning
+#' @param train_size Proportion of the x to split as train subset. By default the value is 0.8
+#' @param random_seed An integer to control the random number generator used. By default the value is 1234
 #' @param n_steps_LSTM Number of steps to split into samples
 #' @param f_neuron Number of neuron in the first LSTM layer
 #' @param f_drop Dropout rate in the first LSTM layer
@@ -18,7 +20,7 @@
 #' @importFrom keras keras_model_sequential layer_lstm layer_dropout layer_dense compile fit optimizer_adam
 #'
 #' @export
-hp_tuning_LSTM <- function(data, n_steps_LSTM, f_neuron,f_drop,s_neuron, s_drop, learn_rate, epoc){
+hp_tuning_LSTM <- function(data, train_size = 0.8, random_seed = 1234, n_steps_LSTM, f_neuron,f_drop,s_neuron, s_drop, learn_rate, epoc){
 
   # Initialize variables
   error <- 1
@@ -33,7 +35,7 @@ hp_tuning_LSTM <- function(data, n_steps_LSTM, f_neuron,f_drop,s_neuron, s_drop,
                          calc_error = numeric())
 
   # Organize data
-  train_test <- split_train_test(data, train_size = 0.7, random_seed = 100)
+  train_test <- split_train_test(data, train_size = train_size, random_seed = random_seed)
 
   train_n_LSTM <- conv_array(train_test$train)
   test_n_LSTM <- conv_array(train_test$test)
