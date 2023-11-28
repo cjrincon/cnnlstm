@@ -16,7 +16,7 @@
 #' @export
 error_metrics <- function(model, X_test, y_test) {
   # Set seed
-  set.seed(1)
+  set.seed(1234)
   # Prediction with model
   pred <- model |> predict(X_test)
   pred <- array(pred)

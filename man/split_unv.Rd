@@ -9,11 +9,11 @@ split_unv(dataset, n_steps)
 \arguments{
 \item{dataset}{Dataset to split into samples as univariate dataset}
 
-\item{n_steps}{Number of steps to split into samples}
+\item{n_steps}{Number (integer) of steps to split into samples}
 }
 \value{
-Returns two data sets: one with the information of the x
-and another with the information of the y
+Returns two data sets: one with the information of the x (features)
+and another with the information of the y (target)
 }
 \description{
 Split a univariate dataset into samples
