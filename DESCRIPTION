@@ -2,8 +2,12 @@ Package: cnnlstm
 Title: This package provides the functions to carry out the methodology CNNLSTM
 Version: 1.0.0
 Authors@R: 
-    person("Catherine", "Rincon", , "catherine.rincon@udea.edu.co", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person(
+    "Catherine", "Rincon",
+    email = "catherine.rincon@udea.edu.co",
+    role = c("aut", "cre"),
+    comment = c(ORCID = "0009-0002-7327-1445")
+    )
 Maintainer: Catherine Rincón <catherine.rincon@udea.edu.co>
 Description: This package provides the functions to carry out the methodology to perform a smoothing of data obtained from sensors with a CNN network and a many-to-one prediction with an LSTM network.
 License: MIT + file LICENSE
