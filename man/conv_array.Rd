@@ -7,7 +7,7 @@
 conv_array(data)
 }
 \arguments{
-\item{data}{Dataset to convert in array}
+\item{data}{Dataset (vector, matrix, dataframe) to convert in array}
 }
 \value{
 Returns the input dataset in a array

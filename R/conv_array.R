@@ -2,7 +2,7 @@
 #'
 #' @author Catherine Rincon, \email{catherine.rincon@udea.edu.co}
 #'
-#' @param data Dataset to convert in array
+#' @param data Dataset (vector, matrix, dataframe) to convert in array
 #'
 #' @return Returns the input dataset in a array
 #'
