@@ -10,6 +10,13 @@
 #'
 #' @export
 conv_array <- function(data){
+
+  if (nrow(data) == 0)
+    stop("The data must have at least one observation")
+
+  if (ncol(data) == 0)
+    stop("The data must have at least one column")
+
   array(data = unlist(data),
         dim = c(nrow(data), ncol(data)),
         dimnames = list(rownames(data),
