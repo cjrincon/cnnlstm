@@ -1,15 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# cnnlstm <img src="man/figures/logo_cnnlstm.png" align="right" alt="" width="120" />
-
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/cjrincon/cnnlstm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/cjrincon/cnnlstm/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The cnnlstm package provides functions to carry out the methodology
-CNN-LSTM:
+# cnnlstm <img src="man/figures/logo_cnnlstm.png" align="right" alt="" width="120" />
+
+The `cnnlstm` package provides functions to carry out the methodology
+CNN-LSTM in `R`:
 
 - Split data
 
@@ -22,9 +21,9 @@ CNN-LSTM:
 
 ## Installation
 
-You can install the development version of cnnlstm from
-[GitHub](https://github.com/). It is recommended to follow these steps
-to avoid problems when using the package:
+You can install the development version of `cnnlstm` from
+[GitHub](https://github.com/cjrincon/cnnlstm). It is recommended to
+follow these steps to avoid problems when using the package:
 
 ``` r
 # Step 1: Install the reticulate package
@@ -47,3 +46,8 @@ install.packages("devtools")
 devtools::install_github("cjrincon/cnnlstm")
 library(cnnlstm)
 ```
+
+## Examples
+
+You can visit the [package website](https://cjrincon.github.io/cnnlstm/)
+to explore the functions, documentation and examples.
