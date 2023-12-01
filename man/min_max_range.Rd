@@ -4,10 +4,10 @@
 \alias{min_max_range}
 \title{Calculate the range of a dataset}
 \usage{
-min_max_range(x)
+min_max_range(data)
 }
 \arguments{
-\item{x}{Dataset to calculate the minimum and maximum}
+\item{data}{Dataset (vector, matrix, dataframe) to calculate the minimum and maximum}
 }
 \value{
 Returns a matrix with 2 rows and p columns (variables) with
