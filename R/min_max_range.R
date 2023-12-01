@@ -12,6 +12,8 @@
 #' @export
 min_max_range <- function(data){
   if (sum(dim(data)) == 0)
+    data <- matrix(data)
+  if (sum(dim(data)) == 0)
     stop(paste('data must be minimum 1 column', '\n', ''))
 
   apply(data, MARGIN = 2, FUN = range)
