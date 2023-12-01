@@ -5,3 +5,13 @@
 data <- matrix(c(25, 30, 40, 70, 20, 10), nrow=2, ncol=3)
 inf <- min_max_range(data)
 norm_min_max(data, inf, scaler='transform')
+
+
+# Example 2
+# Generating dataset with data NASA, use the min_max_range function to obtain range and
+# use the norm_min_max function with scaler argument equal to transform
+
+data(data_NASA)
+cycle <- data_NASA$cycle
+inf <- min_max_range(cycle)
+norm_min_max(cycle, inf, scaler='transform')
