@@ -50,13 +50,30 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">hp_tuning_CNN</span><span class="op">(</span><span class="va">data</span>, <span class="va">n_steps</span>, <span class="va">n_filter</span>, <span class="va">neuron</span>, <span class="va">learn_rate</span>, <span class="va">epoc</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">hp_tuning_CNN</span><span class="op">(</span></span>
+<span>  <span class="va">data</span>,</span>
+<span>  train_size <span class="op">=</span> <span class="fl">0.8</span>,</span>
+<span>  random_seed <span class="op">=</span> <span class="fl">1234</span>,</span>
+<span>  <span class="va">n_steps</span>,</span>
+<span>  <span class="va">n_filter</span>,</span>
+<span>  <span class="va">neuron</span>,</span>
+<span>  <span class="va">learn_rate</span>,</span>
+<span>  <span class="va">epoc</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>data</dt>
 <dd><p>Dataset to split and tuning</p></dd>
+
+
+<dt>train_size</dt>
+<dd><p>Proportion of the x to split as train subset. By default the value is 0.8</p></dd>
+
+
+<dt>random_seed</dt>
+<dd><p>An integer to control the random number generator used. By default the value is 1234</p></dd>
 
 
 <dt>n_steps</dt>
