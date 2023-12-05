@@ -20,7 +20,7 @@
 #' @importFrom keras keras_model_sequential layer_lstm layer_dropout layer_dense compile fit optimizer_adam
 #'
 #' @export
-hp_tuning_LSTM <- function(data, train_size = 0.8, random_seed = 1234, n_steps_LSTM, f_neuron,f_drop,s_neuron, s_drop, learn_rate, epoc){
+hp_tuning_LSTM <- function(data, train_size = 0.8, random_seed = 1234, n_steps_LSTM = 10, f_neuron = 128, f_drop = 0.3, s_neuron = 32, s_drop = 0.2, learn_rate = 0.01, epoc = 500){
 
   # Initialize variables
   error <- 1

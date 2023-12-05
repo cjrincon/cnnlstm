@@ -18,7 +18,16 @@
 #' @importFrom keras keras_model_sequential layer_conv_1d layer_max_pooling_1d layer_flatten layer_dense compile fit optimizer_adam
 #'
 #' @export
-hp_tuning_CNN <- function(data, train_size = 0.8, random_seed = 1234, n_steps, n_filter,neuron, learn_rate, epoc){
+hp_tuning_CNN <- function(data, train_size = 0.8, random_seed = 1234, n_steps = 3, n_filter = 64, neuron = 100, learn_rate = 0.001, epoc = 500){
+
+  if (nrow(data) == 0)
+    stop("The data must have at least one observation")
+
+  if (ncol(data) == 0)
+    stop("The data must have at least one column")
+
+  if (!is.numeric(train_size))
+    stop("train_size must be a positive number between 0.5 and 1")
 
   # Initialize variables
   n_var <- length(data)

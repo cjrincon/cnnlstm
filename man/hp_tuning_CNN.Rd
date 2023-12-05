@@ -8,11 +8,11 @@ hp_tuning_CNN(
   data,
   train_size = 0.8,
   random_seed = 1234,
-  n_steps,
-  n_filter,
-  neuron,
-  learn_rate,
-  epoc
+  n_steps = 3,
+  n_filter = 64,
+  neuron = 100,
+  learn_rate = 0.001,
+  epoc = 500
 )
 }
 \arguments{
