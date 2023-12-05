@@ -15,8 +15,15 @@
 #'
 #' @export
 error_metrics <- function(model, X_test, y_test) {
+
+  if (nrow(X_test) == 0)
+    stop("The data must have at least one observation")
+
+  if (nrow(y_test) == 0)
+    stop("The data must have at least one observation")
+
   # Set seed
-  set.seed(1234)
+  set.seed(123)
   # Prediction with model
   pred <- model |> predict(X_test)
   pred <- array(pred)
